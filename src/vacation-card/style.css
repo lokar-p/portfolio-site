@@ -1,0 +1,53 @@
+body {
+    display : flex-box;
+     
+
+}
+
+.fatherDiv{ 
+    position:relative !important;
+    display :inline-block;
+    margin: 10px;
+    width: 220px;
+    height: fit-content;
+    border-radius:5px;
+    box-shadow: 1px 2px 3px 0px rgba(17, 17, 17, 0.764);
+
+}
+.form--style{
+    display: grid;
+    grid-template-columns: 60px  60px / 1fr 1fr;
+    grid-template-rows: 20px 20px;
+    margin: 5px;
+}
+.soldOut-div {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: rgb(255 , 255 ,255);
+    padding : 2px;
+    border-radius: 3px;
+    width : fit-content;
+    height: fit-content;
+    
+}
+
+.img-container {
+    display: block;
+    width : 220px;
+    height : 300px;
+    background-color: rgb(198, 201, 201);
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 2px 3px 0px rgba(17, 17, 17, 0.477);
+}
+.card-description {
+ height : fit-content;
+ 
+
+ 
+
+}
+.card-description > p , .card-description > div{
+    margin: 5px ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
