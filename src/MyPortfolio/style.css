@@ -1,0 +1,913 @@
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    
+    
+  }
+body{ display: flex;
+    justify-content: center;
+    font-family: "Courier Prime", serif;
+    /* font-family: "Jersey 15", serif; */
+    font-weight: normal;
+    background: linear-gradient( 90deg ,rgb(77 202 216) , rgb(71, 146, 203));
+    padding :10px 20px;
+    color:#004766;
+}
+#root{
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow:  10px  10px  13px  rgba(0, 0, 0, 0.12);
+    max-width: 1400px;
+   
+ 
+}
+
+.headerContainer{
+    position:sticky;
+    top: 0px;
+    z-index: 1;
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: rgba(253, 253, 253, 0.894) ;
+    height:50px;
+    border-radius: 10px 10px 0px 0px;
+    font-weight: bold;
+    box-shadow:  0px 2px 4px rgba(0, 0, 0, 0.311);
+    
+}
+.skillsNavigator{
+ transition: 1s;
+}
+.ScrollTrackerLine {
+    position: absolute;
+    transition-timing-function:ease;
+    bottom : 0px;
+    left:0px;
+    height: 2px;
+    background-color: rgb(22, 97, 132);
+  
+
+}
+
+.headerlistFather{
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;  
+    height:20px;
+    list-style: none;
+    
+}
+
+
+.headerlistFather > li{
+    transition: 1s;
+    padding-bottom:2px ;
+    /* border-bottom: solid 2px ;  */
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0px  6px;
+    padding : .3em;
+}
+
+.headerlistFather > .sitLogo {
+    width: 20px;
+    height: 20px;
+    margin-right: auto;
+}
+.headerlistFather > .shareImageDiv {
+   
+    border: none;
+    height: auto;
+    margin-left:auto ;
+
+}
+
+
+.shareImageDiv > img{
+    width: 25px;
+    cursor: pointer;
+}
+
+/** menu icon styles */
+.menuIcon{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 10%;
+    margin-right : 10px;
+    padding: 7px;
+    transition: .3s;
+    
+}
+
+ .menuIcon > div {
+    transition: .5s;
+    border: .05pc solid #004766;
+    width : 18px;
+    
+}
+.MainContentContainer{ 
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+    
+}
+.darkModeToggleButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    right:  50px;
+    z-index: 1;
+    width: 45px;
+    height: 45px;
+    background-color: #3bd9fc;
+    border-radius: 13px;
+    box-shadow: 1px 2px 3px 1px rgba(116, 212, 241, 0.553)
+
+}
+.darkModeToggleButton:hover{
+    cursor: pointer;
+}
+.PopUpSideMenuContainer{
+    background-color: rgba(255, 0, 0, 0);
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    transition: .6s;
+    display: none;
+    justify-content: end;
+  
+
+}
+.PopUpSideMenu{
+    
+    display: flex;
+    align-self: end;
+    width: 68%;
+    background-color: rgba(253, 253, 253, 0.938) ;
+    border-radius: 0px 0px 0px 0px;
+   
+   
+   
+
+ 
+    
+}
+
+ 
+.PopUpSideMenuReverseAnimation{
+    animation: reverseAnimation .5s;
+    animation-timing-function: ease-in;
+}
+@keyframes reverseAnimation {
+    from {
+        width: 100%;
+       }    
+       to {
+        width: 0%;
+       
+       }
+    
+    
+}
+.PopUpSideMenuList {
+    display:flex;
+    
+    flex-direction: column;
+    list-style: none;
+    padding:20px;
+    height: 100%;
+    width: 100%;
+   
+    
+}
+.PopUpSideMenuList >li{
+    font-weight: 400;
+    border-radius: 2px;
+    font-size: 1.2em;
+    padding:10px 20px  ;
+
+}
+li[class='cv'] > a {
+    text-decoration: none;
+    color : inherit;
+    width : 100%;
+    height: 100px;
+}
+li[class='lang']{
+
+    padding: 0px;
+    padding-right: 20px;
+}
+li[class='mode']{
+
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+
+select {
+    border: none;
+    height: 100%;
+    font-size: 1.1em;
+    font-family: "Courier Prime", serif;
+    padding : 5px;
+    font-weight:normal;
+    width: 100%;
+    background-color:initial;
+    padding:10px 16px  ;
+    cursor: pointer;
+}
+option{
+    border: none;
+    padding: 5px;
+}
+
+.PopUpSideMenuList >li:hover{
+background-color: rgba(178, 195, 200, 0.479);
+border-left: 2px solid rgb(167, 230, 230);
+cursor: pointer;
+    
+
+}
+
+
+
+
+
+.aboutSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+}
+
+.description1 > h2 , .description2 > h2 {
+  
+
+    border-radius: 0px 0px 0px 0px ;
+    padding:  .4em;
+}
+.description2 > div > p ,.description1 > div > p {
+    
+
+    border-radius: 0px 0px 0px 0px ;
+    padding: 1.5em;
+    font-size:.8em; 
+    word-spacing: 2px;
+    box-shadow: inset 0px -2px 1px 0px rgba(59, 141, 174, 0.212);
+    background-color: #e8fcff;
+}
+.description2 > div ,.description1 > div  {
+    padding-left: 4px;
+    background: linear-gradient(180deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    box-shadow: inset 0px -2px 1px 0px rgba(59, 141, 174, 0.212);
+
+}
+   
+
+
+
+
+ .MyImageContainer  {
+    width: 190px;
+    height: 200px;
+    background: linear-gradient(45deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    padding: 3px;
+    padding-bottom:0px ;  
+    margin: 30px;
+    margin-top: 0px;  
+    border-bottom : solid 6px;
+    border-color: #004766;
+    border-radius: 10px;
+    box-shadow:   2px 2px 6px 0px rgba(0, 0, 0, 0.501);
+   
+}
+
+ .skillLogo {
+   
+    padding: .5em;
+    transition: 1s;
+    border: solid 3px;
+    border-color: #004766;
+    border-radius: 10px;
+    box-shadow: inset 3px 1px 6px 1px rgb(81 221 255 / 66%);
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    background: radial-gradient(circle, rgba(126,211,228,0.5648994017183111) 18%, rgba(184, 251, 255, 0.883) 74%);
+    border-width: 0px;
+    
+    
+
+}
+
+.skillLogo:hover{
+    animation: changeSize;
+}
+/*skill animation*/
+@keyframes changeSize {
+    0% {
+        position: absolute;
+        max-width: 100px;
+        max-height: 100px;
+        left: auto ;
+        top: auto ;
+    }
+ 
+    100% {
+        position: absolute;
+        max-width: 120px;
+        max-height: 120px;
+        left: 10px ;
+        top: 10px ;
+    }
+
+}
+.skillLogo:hover {
+    animation: changeSize;
+    animation-duration: infinite;
+    transition: .5s;
+}
+
+
+.skillSection {
+    width: 100%;
+
+}
+.allSkills{
+
+    display: flex;
+    width: 100%;
+ 
+  
+
+}
+.skillsHeader  {
+    background-color: #e8fcff;
+    padding: 0px 7px;
+    width: fit-content;
+    font-weight: bold;
+    padding-top: .3em;
+    padding-bottom: 3px;
+    
+
+    
+}
+    
+.SkillHeaderContainer {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    width: fit-content;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    background: linear-gradient(90deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+  
+  
+}
+   
+
+   
+
+.techSkillsContainer{
+    
+    flex: 1;
+    width: 60%;
+    padding: 2em ;
+    display: grid;
+    grid-template-columns: repeat(3 , 33.333%);
+    background-color: rgb(240, 248, 255);
+    
+    
+}
+.scoreBobble {
+    
+    position: absolute; 
+    top: -2em;
+    right: -1em;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    font-size: .8em;
+    font-weight: bold;
+    background: radial-gradient(circle, rgba(126,211,228,0.5648994017183111) 18%, rgba(207,226,227,0.7053488399205583) 74%);;
+    box-shadow: inset 3px 1px 6px 1px rgb(81 221 255 / 66%);
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    margin: 2px;
+}
+
+.skill{
+ 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.skill> h3{
+    font-size : 100%;
+    font-weight: normal;
+    color: #004766;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    text-align: center;
+    width: 100%;
+}
+
+.soft_skills{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    width: 40%;
+    background-color: rgba(9, 184, 247, 0.115);
+  
+   
+}
+.soft_skills > div {
+    display: flex;
+    align-items: center;
+}
+.slfLearning , .ProbSolving , .DetOriented {
+    border-radius: 10px;
+    margin: .5em;
+    width : 50%;
+    height: 120px;
+    box-shadow : 0px 2px 4px 1px rgba(10, 10, 10, 0.36);
+    
+}
+/*adding a style for a discrption fro each soft skill */
+.skill_description_line {
+    width: 0px;
+    height: 5px;
+    background-color: rgba(247, 247, 247, 0.465);
+    border-left: 2px solid rgb(110, 163, 209);
+    transition-timing-function: ease-out;
+} 
+@keyframes changeTheWidthOfTheLine{
+    from {
+        width: 0px;
+    }
+    to{
+        width:100px;
+    }
+}
+.ProbSolvingContainer{
+      font-size: .9em;
+      width: 100%;
+}
+
+.slfLearningContainer{
+    position: relative;
+    font-size:.9em;
+    width: 100%;
+    align-self: end;  
+}
+.DetOrientatedContainer{
+    justify-content: space-between;
+    font-size: .9em;
+    width: 100%;
+      
+  }
+  .slfLearningContainer > p {
+    font-size: small;
+    font-weight: 600;
+  
+    width: 50%;
+    margin: 1em;
+  }
+  .DetOrientatedContainer > p  , .ProbSolvingContainer > p{
+    font-size: small;
+    font-weight: 600;
+    text-justify:inter-cluster;
+    width: 50%;
+    margin-left : .5em;
+    order: 1;
+  }
+  .soft_skills > div > p > span {
+     font-weight: bolder;
+    color : black;
+    display: block;
+    margin-bottom: .5em;
+    font-size: 1.3em;
+    
+  }
+@keyframes move-the-line {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: -50%;
+    }
+    100%{
+        left: -10%;
+    }
+}
+
+.slfLearningContainer > img + div {
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: .7s;
+    position: absolute;
+    left: 1%;
+    order: -1;
+
+}
+.slfLearning{
+    justify-self: end;
+}
+
+
+.projectsContainer{
+    
+    display: flex;
+    justify-content: center;
+    padding : 5px;
+    width: 100%;
+
+}
+
+.projectHeder {
+    background-color: #e8fcff;
+    padding: 0px 7px;
+    width: fit-content;
+    font-weight: bold;
+    padding-top: .3em;
+    padding-bottom: 3px;
+    
+
+}
+
+.projectHeaderContainer{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    width: fit-content;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    padding-bottom: 4px;
+    background: linear-gradient(90deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+}
+.projectCard{
+    
+    width: 100%;
+    flex: 1;
+    height: 250px;
+    background: #d9f4ff;
+     background: linear-gradient(45deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(17, 107, 132) 95%);
+    border-radius: 7px;
+    padding: .3em;
+    margin: 5px;
+  
+   
+ 
+    
+
+ 
+}
+.projectCard:hover{
+    animation : changingBackgroundColor 1.6s ease-in infinite;
+    animation-delay: .2s;
+}
+
+@keyframes changingBackgroundColor{
+    0%{
+        background: #26c2ff;
+        background: linear-gradient(36deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    }
+    10%{
+        background: #26c2ff;
+        background: linear-gradient(72deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    }
+    20%{
+        background: #26c2ff;
+        background: linear-gradient(108deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    }
+    30%{
+        background: #26c2ff;
+        background: linear-gradient(144deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    }
+    40%{
+        background: #26c2ff;
+        background: linear-gradient(180deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    }
+    50%{
+        background: #26c2ff;
+        background: linear-gradient(216deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    }
+    60%{
+        background: #26c2ff;
+        background: linear-gradient(252deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    }
+    70%{
+        background: #26c2ff;
+        background: linear-gradient(288deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    }
+    80%{
+        background: #26c2ff;
+        background: linear-gradient(324deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    }
+    90%{
+        background: #26c2ff;
+        background: linear-gradient(360deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+    }
+    100%{
+        background: #26c2ff;
+        background: linear-gradient(36deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(3, 101, 128) 95%);
+    }
+
+}
+
+.projectCard > div >p{
+    font-size: small;
+    font-weight: 600;
+  
+}
+.projectCard > div {
+    position: relative;
+    background-color:rgb(200, 239, 253);
+    border-radius: 3px;
+    height: 100%;
+    padding: .6em;
+}
+
+
+.open-in-new-icon {
+    position: absolute;
+    transition: .5s;
+    right: 10px;
+    width: 25px;
+    
+}
+.open-in-new-icon:hover{
+    cursor: pointer;
+    color: #00a6ff;
+    
+}
+.projctHeaderContainer{
+    display: flex;
+    align-items: end;
+    width: 100%;
+    margin-bottom:2.5em;
+}
+.projectImageClass{
+    width: 40%;
+    height:90px;
+    border-radius: 3px;
+    box-shadow: 1px 2px 3px 1px rgb(123, 193, 255);
+    margin-right: 20%;
+}
+
+
+
+
+footer {
+margin-top: 5%;
+margin-bottom: 1%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.socialMediaLinks {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 0px ;
+  
+}
+.socialMediaLinks > a {
+  
+    flex : 1 ;
+    margin: 1px 5% ;
+
+}
+.socialMediaLinks > a > img{
+ transition: .2s;
+ width: 30px;
+ border-color: rgb(135 154 161)  ;
+ border-radius: 10%;
+ 
+ 
+}
+footer > p {
+    width: 100%;
+    text-align: center;
+    font-size: .6rem;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    font-weight: normal;
+}
+
+.tabletResponseStyle {
+    display: grid; 
+    grid-template-columns: repeat(2 , 48%);
+    gap: 5px;
+   
+}
+
+/** flip  icon for dark Mode*/
+.darkModeDiv{
+ width: 50px;
+ height: 50px;
+ 
+}
+.DarkModeFontColor{
+    color: aliceblue;
+
+}
+.DarkModefliperCon{
+    
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+
+
+
+.dark-mode-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    
+}
+.icon-div:hover{
+    cursor: pointer;
+    color: rgba(32, 31, 31, 0.938);
+
+}
+.icon-div{
+    display: flex;
+    
+    position: relative;
+    align-items: center;
+    justify-content: end;
+    min-width: 45px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 17px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color:rgb(0,108,133);
+    margin: 0px;
+    
+}
+.icon-div > P {
+    padding: 0px;
+    margin: 3px;
+    
+}
+.fliper-div{
+    transition:500ms; 
+    border-style: solid;
+    border-width: 2px;
+    border-color:rgba(225, 235, 235, 0.429);
+    position : absolute;
+    background-color: rgba(153, 148, 148, 0.95);
+    border-radius: 100%;
+    width: 16px;
+    height: 15px;
+    margin: 1.5px;
+}
+
+.soundFliper{
+    transition:500ms; 
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.soundFlipperContainer{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+/*** responsive design section */
+@media (max-width: 820px){
+    .allSkills{
+        flex-direction: column;
+    }
+    .allSkills > * {
+        width: 100%;
+        height: 200px;
+    }
+    .soft_skills {
+        padding : 2em ;
+        flex-direction: column;
+        
+        height: auto;
+    }
+
+}
+ @media (max-width : 516px ) { 
+    .projectCard{
+        margin: 5px auto;
+    }
+    body{
+        padding : 0px ;
+    }
+    main{
+        border-radius: 0px;
+    }
+    .headerContainer{
+        border-radius: 0px;
+    }
+    .skill > img{
+    
+        margin: auto;
+        max-width: 70%;  
+     
+    }
+    .soft_skills {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: .5em;
+    }
+    .soft_skills > div {
+        margin: 1em 0em;
+        width: 100%;
+        align-self: center;
+    }
+
+.MyImageContainer{
+    align-self: start;
+    width: 150px;
+    height: 150px;
+    margin-left: 0px;
+    margin-right:10px;
+    background: linear-gradient(45deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(1, 95, 121) 95%);
+   
+}   
+
+
+.techSkillsContainer{
+    display: grid;
+    grid-template-columns: repeat(2 , 50%);
+    
+    
+}
+.bodyContainer{
+    justify-content: start;
+}
+
+
+.socialMediaLinks > a > img{
+ 
+    width: 30px;
+    border-radius: 10%;
+
+   
+   }
+
+   .tabletResponseStyle {
+    
+    display: grid; 
+    grid-template-columns: repeat(1 , 95%);
+    gap: 5px;
+  
+    
+}
+
+
+}
+
+
