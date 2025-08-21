@@ -1,10 +1,10 @@
 import React from "react";
-import {BoplState} from './skillsSection.js'
+//import {BoplState} from './skillsSection.js'
 
 
 export default function Skill(props){
 
-    const [bobbleON  , setbobbleON] = React.useContext(BoplState)
+//    const [bobbleON  , setbobbleON] = React.useContext(BoplState)
    
     //creating a bobble using span tag and add class and text to it
     const bobble = document.createElement('span')
@@ -40,7 +40,7 @@ export default function Skill(props){
     return(
         <div className="skill" >
             <div style = {{display : 'flex' , position: 'relative' , width:'60%' , height: '60%'}}>
-            <img id = {props.id} src={props.src}className="skillLogo" /**onMouseOver={scoreBobbleON} onMouseLeave= {scoreBobbleOFF}*/ bbb/>
+            <img alt="" id = {props.id} src={props.src}className="skillLogo" /**onMouseOver={scoreBobbleON} onMouseLeave= {scoreBobbleOFF}*/ bbb/>
             
             </div>
             <h3 style={{color :props.DarkMode? 'white' : 'inherit'}}>{props.name}</h3>

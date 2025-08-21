@@ -11,7 +11,7 @@ export default function Projects(){
     const windowWidth = React.useContext(windowWidthSize)
     const [DarkMode , setDarkMode] = React.useContext(DarkModeContext)
 
-    
+    console.log(setDarkMode)
     
     React.useEffect( ()=>{
        

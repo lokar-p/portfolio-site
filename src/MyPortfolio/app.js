@@ -14,6 +14,7 @@ export default function AppComponent(){
   const [windowWidth , setWindowWidth] = React.useState(window.innerWidth)
   // state that holding language status
   const [language , setLanguage ] = React.useState(localStorage.getItem('language'));
+  console.log(setLanguage)
 
   console.log('language',language)
   // changing the state immediately whenever the window width change
@@ -27,9 +28,9 @@ export default function AppComponent(){
   let darkmode = localStorage.getItem('darkMode')
 
   setDarkMode(()=>{
-   if (darkmode == 'false'){
+   if (darkmode === 'false'){
       return false
-   }else if (darkmode == 'true'){
+   }else if (darkmode === 'true'){
       return true
    }
   })

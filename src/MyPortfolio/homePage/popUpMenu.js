@@ -45,7 +45,7 @@ const darkCon = {
 
 function changeDarkMode(){
     setDarkMode((old)=>{
-        if(old == true){
+        if(old === true){
             localStorage.setItem('darkMode' , false)
             return false
         }else{

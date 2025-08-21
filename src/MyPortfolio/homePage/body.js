@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePic from '../pic/profile-pic.jpg'
+//import profilePic from '../pic/profile-pic.jpg'
 import SkillSection from './skillsSection'
 import Projects from '../projectSection/project';
 import { windowWidthSize } from '../app';
@@ -22,14 +22,14 @@ export default function Body(){
      },[windowWidth])
      
 // styling dark mode toggle button
-let topPosition = document.documentElement.clientHeight - 100
+let topPosition = document.documentElement.clientHeight - 50
 let dark_mode_button_display = windowWidth > 515 ? 'flex' : 'none';
 
 // add click event to dark mode toggle button to toggle between dark and light mode 
 
 function DarkModeToggler(){
     setDarkMode((old)=>{
-        if(old == true){
+        if(old === true){
             localStorage.setItem('darkMode' , false)
             return false
         }else{
@@ -38,11 +38,12 @@ function DarkModeToggler(){
         }
     })
 }
+const DarkModeTogglerImage = DarkMode? 'http':"https//:ww.google.com"; 
     return(
         
         
         <div className='MainContentContainer'>
-            <div className='darkModeToggleButton' onClick={DarkModeToggler} style={{top: topPosition , display: dark_mode_button_display}}>{DarkMode? 'Dark' : 'light'}</div>
+            <div className='darkModeToggleButton' onClick={DarkModeToggler} style={{top: topPosition , display: dark_mode_button_display}}><img alt='' src={DarkModeTogglerImage}/></div>
             <AboutSection/>
             <SkillSection />
             <Projects />

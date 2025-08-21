@@ -3,7 +3,7 @@ import sitLogo from '../pic/sitlogo1.png';
 import {windowWidthSize} from '../app';
 import PopUpSideMenu from './popUpMenu'
 import { DarkModeContext } from '../app';
-import { click } from '@testing-library/user-event/dist/click';
+//import { click } from '@testing-library/user-event/dist/click';
 
 
 
@@ -15,8 +15,12 @@ export default function Header(){
     const [scrollHight  , setScrollHight ] = React.useState(window.scrollY)
     const [popUpMenuToggle , setPopUpMenu] = React.useState(false)
     const [DarkMode , setDarkMode] = React.useContext(DarkModeContext)
+    
+    console.log(scrollHight);
+    console.log(setDarkMode);
 
     React.useEffect(()=>{
+        
         window.addEventListener('scroll' , ()=>{
             setScrollHight(()=>window.scrollY)
         })
@@ -31,7 +35,7 @@ export default function Header(){
     headerBottom.style.width = `${scrollChangingPercentage}%`
     
     
-    } , [window.scrollY])
+    } , [])
  
     React.useEffect( ()=>{
      // set isMenuButton to false or true depend on  the screen size , use to toggle between menuIcon and reguler navigation bar
@@ -46,6 +50,8 @@ export default function Header(){
             setIsMenuButton(false)
             setPopUpMenu(false)//return popUpMenuToggle to its default value to prevent close icon from appear changing window size 
         }
+
+        
       
     }, [windowWidth])
   
@@ -93,8 +99,8 @@ export default function Header(){
      function changMenuDisplay(){
         setPopUpMenu((old)=>!old)
         let PopUpMenu = document.getElementsByClassName('PopUpSideMenuContainer')[0]
-        let MenuLest = document.getElementsByClassName('PopUpSideMenuList')[0]
-        if(PopUpMenu != undefined){
+       //  let MenuLest = document.getElementsByClassName('PopUpSideMenuList')[0]
+        if(PopUpMenu !== undefined){
           PopUpMenu.style.display = popUpMenuToggle? 'none' : 'flex';
 
         }       
@@ -136,7 +142,7 @@ export default function Header(){
         <nav className='headerContainer'  style = {{backgroundColor : DarkMode?  'rgba(0, 48, 58, 0.94)' : 'rgba(255, 255, 255, 0.84)'}}>
             <span className= 'ScrollTrackerLine' style={{backgroundColor: DarkMode? 'rgb(11, 171, 245)' : 'rgb(22, 97, 132)'}}></span>
             <ul className='headerlistFather' style={{color: DarkMode? 'white' : '#004766'}}>
-                <li className='sitLogo'><img src={sitLogo}/></li>
+                <li className='sitLogo'><img alt='' src={sitLogo}/></li>
                 {menuContent}
             </ul>
              {windowWidth <=515 && <PopUpSideMenu /> }

@@ -1,4 +1,4 @@
-import React from "react"
+
 const  Data = [
     {
         Id  : '1' ,

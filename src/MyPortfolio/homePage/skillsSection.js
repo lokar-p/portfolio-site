@@ -14,6 +14,7 @@ export default function SkillsSection(){
  const windowWidth = React.useContext(windowWidthSize)
  const [DarkMode , setDarkMode] = React.useContext(DarkModeContext)
  
+console.log(setDarkMode);
 
 // get the skill data from data.js file
   const skill = Data.map((skill)=>{ // mapping over each skill and pass skill data to <Skill/> component
@@ -57,9 +58,15 @@ export default function SkillsSection(){
                     </div>              
                     
                     <div className='soft_skills'>
-                    <div  className='DetOrientatedContainer'> <p> <span style={{color : DarkMode? 'rgb(63, 207, 255)' : 'rgba(3, 20, 35, 0.84)'}}>Detail-Oriented </span>I pay close attention to the finer details in my work, ensuring accuracy and efficiency.</p> <img src= {DetailOriented} className='DetOriented' alt='detail-orinted image' onMouseOver={AddSoftSkillDescription}/></div>
-                    <div className='slfLearningContainer'> <p> <span style={{color : DarkMode? 'rgb(63, 207, 255)' : 'rgba(3, 20, 35, 0.84)'}}>self-learning </span>I am a self-motivated learner who continuously seeks knowledge to stay ahead in the tech industry.</p> <img src= {selfLearning} className='slfLearning' alt = 'self-learning image' onMouseOver={AddSoftSkillDescription}/></div> 
-                    <div className='ProbSolvingContainer'> <p> <span style={{color : DarkMode? 'rgb(63, 207, 255)' : 'rgba(3, 20, 35, 0.84)'}}>problem solving </span>I excel at analyzing complex challenges and finding innovative solutions.</p> <img  src= {ProblemSolving} className='ProbSolving' alt = 'problem solving image' onMouseOver={AddSoftSkillDescription}/></div>
+                    <div  className='DetOrientatedContainer'> 
+                       <p> 
+                          <span style={{color : DarkMode? 'rgb(63, 207, 255)' : 'rgba(3, 20, 35, 0.84)'}}>Detail-Oriented </span>
+                          I pay close attention to the finer details in my work, ensuring accuracy and efficiency.
+                       </p> 
+                       <img src= {DetailOriented} className='DetOriented' alt='detail-orinted' onMouseOver={AddSoftSkillDescription}/>
+                    </div>
+                    <div className='slfLearningContainer'> <p> <span style={{color : DarkMode? 'rgb(63, 207, 255)' : 'rgba(3, 20, 35, 0.84)'}}>self-learning </span>I am a self-motivated learner who continuously seeks knowledge to stay ahead in the tech industry.</p> <img src= {selfLearning} className='slfLearning' alt = 'self-learning ' onMouseOver={AddSoftSkillDescription}/></div> 
+                    <div className='ProbSolvingContainer'> <p> <span style={{color : DarkMode? 'rgb(63, 207, 255)' : 'rgba(3, 20, 35, 0.84)'}}>problem solving </span>I excel at analyzing complex challenges and finding innovative solutions.</p> <img  src= {ProblemSolving} className='ProbSolving' alt = 'problem solving ' onMouseOver={AddSoftSkillDescription}/></div>
                     </div> 
 
             

@@ -1,12 +1,13 @@
 import React from 'react';
 import profilePic from '../pic/thumbnails-profile-pic.jpg'
-import fullSizeProfilePic from '../pic/profile-pic.jpg'
+//import fullSizeProfilePic from '../pic/profile-pic.jpg'
 import { windowWidthSize } from '../app';
 import { DarkModeContext } from '../app';
 
 export default function AboutSection(){
     const windowWidth = React.useContext(windowWidthSize)
     const [DarkMode , setDarkMode] = React.useContext(DarkModeContext)
+    console.log(setDarkMode);
     return ( 
         <div className = 'aboutSection'> 
            {windowWidth >=820 && <div className='description1'>
@@ -17,7 +18,7 @@ export default function AboutSection(){
             <div>
                 {/* <img src={profilePic} alt='logman profile image ' className='MyImageContainer'/> */}
                 
-                 <img src={profilePic} alt='logman profile image ' className='MyImageContainer' />
+                 <img src={profilePic} alt='logman' className='MyImageContainer' />
                 
                 
             </div>

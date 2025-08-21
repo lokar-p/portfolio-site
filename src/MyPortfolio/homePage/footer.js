@@ -8,6 +8,7 @@ function sizeBackLinkIcon(e){
 }
 export default function Footer(){
     const [DarkMode , setDarkMode] = React.useContext(DarkModeContext)
+    console.log(setDarkMode)
 
     function reSizeLinkIcon(e){
     
@@ -18,10 +19,10 @@ export default function Footer(){
     return (
         <footer>
             <div className='socialMediaLinks'> 
-                 <a href='https://x.com/loqman_AA'><img  onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src = 'https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=000000'/> </a> 
-                <a href='https://github.com/lokar-p'><img onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon}  src='https://img.icons8.com/?size=100&id=62856&format=png&color=000000'/></a> 
-                 <a href='https://www.linkedin.com/in/loqman-awad-982469207/'><img onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src='https://img.icons8.com/?size=100&id=qNUNvR9aEWql&format=png&color=000000'/></a> 
-                  <a href='https://t.me/loqmanAA'><img onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src='https://img.icons8.com/?size=100&id=oWiuH0jFiU0R&format=png&color=000000'/></a> 
+                 <a href='https://x.com/loqman_AA'><img alt=''  onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src = 'https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=000000'/> </a> 
+                <a href='https://github.com/lokar-p'><img alt='' onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon}  src='https://img.icons8.com/?size=100&id=62856&format=png&color=000000'/></a> 
+                 <a href='https://www.linkedin.com/in/loqman-awad-982469207/'><img alt='' onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src='https://img.icons8.com/?size=100&id=qNUNvR9aEWql&format=png&color=000000'/></a> 
+                  <a href='https://t.me/loqmanAA'><img alt='' onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src='https://img.icons8.com/?size=100&id=oWiuH0jFiU0R&format=png&color=000000'/></a> 
         
             </div>
              <p>© 2025 Logman</p>
