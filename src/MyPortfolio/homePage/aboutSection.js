@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePic from '../pic/thumbnails-profile-pic.jpg'
+import profilePic from '../pic/profile-pic.jpg'
 //import fullSizeProfilePic from '../pic/profile-pic.jpg'
 import { windowWidthSize } from '../app';
 import { DarkModeContext } from '../app';

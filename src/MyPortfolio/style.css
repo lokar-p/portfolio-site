@@ -590,8 +590,8 @@ cursor: pointer;
     height: 250px;
     background: #d9f4ff;
      background: linear-gradient(45deg, rgba(38, 194, 255, 1) 11%, rgba(66, 249, 255, 1) 26%, rgb(66, 205, 240) 49%, rgb(39, 205, 186) 69%, rgb(17, 107, 132) 95%);
-    border-radius: 7px;
-    padding: .3em;
+    border-radius: 16px 2px 16px 2px;
+    padding: .2em;
     margin: 5px;
   
    
@@ -601,8 +601,8 @@ cursor: pointer;
  
 }
 .projectCard:hover{
-    animation : changingBackgroundColor 1.6s ease-in infinite;
-    animation-delay: .2s;
+    animation : changingBackgroundColor 1.6s ease infinite;
+    animation-delay: .1s;
 }
 
 @keyframes changingBackgroundColor{
@@ -661,11 +661,24 @@ cursor: pointer;
 .projectCard > div {
     position: relative;
     background-color:rgb(200, 239, 253);
-    border-radius: 3px;
+    border-radius: 20px 2px 20px 2px;
     height: 100%;
     padding: .6em;
 }
 
+.GitHub-icon{
+    position: absolute;
+    transition: .5s;
+    right: 45px;
+    width: 25px;
+}
+.GitHub-icon:hover , .open-in-new-icon:hover{
+    cursor: pointer;
+    color: #00a6ff85;
+    border-radius: 20%;
+    box-shadow: 0px 0px 4px 4px rgba(31, 168, 247, 0.329);
+    
+}
 
 .open-in-new-icon {
     position: absolute;
@@ -674,11 +687,7 @@ cursor: pointer;
     width: 25px;
     
 }
-.open-in-new-icon:hover{
-    cursor: pointer;
-    color: #00a6ff;
-    
-}
+
 .projctHeaderContainer{
     display: flex;
     align-items: end;

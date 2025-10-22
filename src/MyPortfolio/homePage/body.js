@@ -5,6 +5,8 @@ import Projects from '../projectSection/project';
 import { windowWidthSize } from '../app';
 import AboutSection from './aboutSection';
 import { DarkModeContext } from '../app';  
+import nightModeIcon from '../pic/night-mode.png';
+import lightModeIcon from '../pic/light-mode.png';
 
 export default function Body(){
      const windowWidth = React.useContext(windowWidthSize)
@@ -38,12 +40,18 @@ function DarkModeToggler(){
         }
     })
 }
-const DarkModeTogglerImage = DarkMode? 'http':"https//:ww.google.com"; 
+const DarkModeTogglerImage = DarkMode?lightModeIcon :nightModeIcon ; 
+
+let darkMode_Toggle_Button_style = {
+    top: topPosition ,
+    display: dark_mode_button_display,
+    backgroundColor : DarkMode ? 'rgba(255, 255, 255, 1)' : 'rgba(8, 42, 58, 1)',
+}
     return(
         
         
         <div className='MainContentContainer'>
-            <div className='darkModeToggleButton' onClick={DarkModeToggler} style={{top: topPosition , display: dark_mode_button_display}}><img alt='' src={DarkModeTogglerImage}/></div>
+            <div className='darkModeToggleButton' onClick={DarkModeToggler} style={darkMode_Toggle_Button_style}><img alt='' src={DarkModeTogglerImage}/></div>
             <AboutSection/>
             <SkillSection />
             <Projects />

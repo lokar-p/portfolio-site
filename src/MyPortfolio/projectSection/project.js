@@ -32,17 +32,23 @@ export default function Projects(){
          <div className="projectsContainer">
 
             <ProjectCard
+                linkToProjectSite = 'https://logmanmorwih.netlify.app/'
+                linkToGitHubRepo = 'https://github.com/lokar-p/portfolio-site'
                 projectImage={portfolioImage}
                 projectName='My site'
                 description = 'a portfolio that showcase my skills and my recent project '
             />
             <ProjectCard
+                linkToProjectSite = 'https://daalet.netlify.app/'
+                linkToGitHubRepo = 'https://github.com/lokar-p/Daalet-game-project'
                 projectImage={daaletImage}
                 projectName='Daalet Game'
                 description = 'Sudanese traditional game played by tow players in six-by-six grid'
             
             />
             <ProjectCard
+                linkToProjectSite = ''
+                linkToGitHubRepo = ''
                 projectImage={MLModelImage}
                 projectName='ML Model'
                 description = 'A machine learning model trying to predict conflict conflict outbreak in sudan  '

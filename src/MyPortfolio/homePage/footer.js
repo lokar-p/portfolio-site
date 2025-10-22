@@ -1,5 +1,9 @@
 import React from 'react';
 import { DarkModeContext } from '../app';
+import xIcon from '../pic/twitter.png'
+import githubIcon from '../pic/github.png'
+import linkedinIcon from '../pic/linkedin.png'
+import telegramIcon from '../pic/telegram.png'
 
 
 function sizeBackLinkIcon(e){
@@ -19,10 +23,10 @@ export default function Footer(){
     return (
         <footer>
             <div className='socialMediaLinks'> 
-                 <a href='https://x.com/loqman_AA'><img alt=''  onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src = 'https://img.icons8.com/?size=100&id=fJp7hepMryiw&format=png&color=000000'/> </a> 
-                <a href='https://github.com/lokar-p'><img alt='' onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon}  src='https://img.icons8.com/?size=100&id=62856&format=png&color=000000'/></a> 
-                 <a href='https://www.linkedin.com/in/loqman-awad-982469207/'><img alt='' onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src='https://img.icons8.com/?size=100&id=qNUNvR9aEWql&format=png&color=000000'/></a> 
-                  <a href='https://t.me/loqmanAA'><img alt='' onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src='https://img.icons8.com/?size=100&id=oWiuH0jFiU0R&format=png&color=000000'/></a> 
+                 <a href='https://x.com/loqman_AA' target='_blank' rel='noopener noreferrer'><img alt=''  onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src ={xIcon}/> </a> 
+                <a href='https://github.com/lokar-p' target='_blank' rel='noopener noreferrer'><img alt='' onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon}  src={githubIcon}/></a> 
+                 <a href='https://www.linkedin.com/in/loqman-awad-982469207/' target='_blank' rel='noopener noreferrer'><img alt='' onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src={linkedinIcon}/></a> 
+                  <a href='https://t.me/loqmanAA' target='_blank' rel='noopener noreferrer'><img alt='' onMouseLeave={sizeBackLinkIcon} onMouseEnter={reSizeLinkIcon} src={telegramIcon}/></a> 
         
             </div>
              <p>© 2025 Logman</p>

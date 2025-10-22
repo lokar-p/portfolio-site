@@ -33,7 +33,7 @@ console.log(setDarkMode);
   })
 
  function AddSoftSkillDescription (e) {
-  var line = document.createElement('div')
+  let line = document.createElement('div')
   line.classList.add('skill_description_line')
     
   if(e.target.parentElement.children.length <=2 && windowWidth >510){
