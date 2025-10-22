@@ -1,5 +1,6 @@
 import React from "react";
 import { DarkModeContext } from "../app";
+import CvFile from '../pic/Logman awad software engineer CV.pdf'
 
 
 
@@ -102,7 +103,7 @@ const sidPupUpMenuStyle = {
  description.style.borderRadius = '4px'
  description.style.display = 'none'
 
- let cvContainer = document.getElementsByClassName('cv')[0]
+ let cvContainer = document.getElementsByClassName('cvLink')[0]
  cvContainer.appendChild(description) 
  })
     
@@ -122,7 +123,7 @@ const sidPupUpMenuStyle = {
      
         <div  style = {sidPupUpMenuStyle} className="PopUpSideMenu" >
             <ul className="PopUpSideMenuList ">
-                <li onMouseEnter={showCvDescription} onMouseLeave={hideCvDescription} onClick={TriggerTheLinkForDownload} class='cv' style={{color:DarkMode? '#02d9ff': '#004766' , position: "relative"}}><a href='./pic/Logman awad software engineer CV.pdf' className="cvLink"  download>CV</a></li>
+                <li onMouseEnter={showCvDescription} onMouseLeave={hideCvDescription} onClick={TriggerTheLinkForDownload} className="cv" style={{color:DarkMode? '#02d9ff': '#004766' , position: "relative"}}><a href={CvFile} className="cvLink"  download>CV</a></li>
                 <li class='lang'>
                     <select style={{color:DarkMode? '#02d9ff': '#004766'}} >
                         <option>English</option>

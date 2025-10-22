@@ -1,7 +1,7 @@
 import React from 'react';
 import { DarkModeContext } from '../app';
 import Open_In_New_icon from '../pic/open_in_new_icon.png'
-import GitHubIcon from '../pic/GitHub-icon.png'
+import GitHubIcon from '../pic/github.png'
 
 
 function ProjectCard(props){
